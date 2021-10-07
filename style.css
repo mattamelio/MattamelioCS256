@@ -2,7 +2,6 @@ body {
     background-color: lightblue;
     font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.4em;
-    background: #f5f5f5;
     color: #4d4d4d;
     min-width: 230px;
     max-width: 750px;
@@ -17,7 +16,7 @@ h1 {
 
 h2 {
   color: black;
-  margin-left: 20px;
+  margin-left: 100px;
 }
 
 p {
@@ -35,7 +34,7 @@ section {
     width: 100%;
 }
 
-para1{
+para1 {
    text-align: center;
    color: black
 }
