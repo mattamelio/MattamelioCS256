@@ -18,11 +18,16 @@ p {
 }
 
 div {
-    width: 50%;
+    width: 100%;
     height: 100px;
 }
 
 
 section {
-    width: 50%;
+    width: 100%;
+}
+
+para1{
+   text-align: center;
+   color: black
 }
