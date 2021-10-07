@@ -12,11 +12,13 @@ body {
 h1 {
   color: navy;
   margin-left: 20px;
+  text-align: center;
 }
 
 h2 {
   color: black;
   margin-left: 100px;
+  text-align: center;
 }
 
 p {
@@ -35,6 +37,5 @@ section {
 }
 
 para1 {
-   text-align: center;
-   color: black
+   color: blue
 }
