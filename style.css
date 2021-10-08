@@ -66,9 +66,9 @@ th, td {
 }
 
 .footer {
-    postion: fixed;
+    postion: relative;
     left: 0;
-    bottom:0;
+    bottom:5px;
     background-color:r7df9ff;
     color: grey;
     text-align: center;
