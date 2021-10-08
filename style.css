@@ -58,6 +58,7 @@ th, td {
 }
 
 .footer {
+    postion: fixed;
     left: 0;
     bottom:0;
     background-color:red;
