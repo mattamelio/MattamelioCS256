@@ -32,6 +32,7 @@ h2 {
 p {
   color: black;
   font-size: 16px;
+  margin:10px;
 }
 
 div {
@@ -42,6 +43,7 @@ div {
 
 #para1 {
    color: blue
+   margin:15px;
 }
 
 table, th, td {
@@ -58,7 +60,7 @@ th, td {
 }
 
 footer {
-  position: absolute;
+  position: not fixed;
   left: 0;
   bottom: 0;
   width: 100%;
