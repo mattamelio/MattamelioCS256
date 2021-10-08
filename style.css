@@ -60,10 +60,14 @@ th, td {
 }
 
 footer {
+  position: absolute;
   left: 0;
   bottom: 0;
+  height: 100px;
   width: 100%;
-  background-color: black;
-  color: white;
+  color:#FFFFFF; 
+  background: #06303A;
+  font-size:1.5em;
   text-align: center;
+  line-height:100px;
 }
