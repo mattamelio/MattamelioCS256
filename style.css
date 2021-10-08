@@ -63,7 +63,7 @@ th, td {
 .footer {
   width: 100vw;
   display: block;
-  overflow: hiddne;
+  overflow: hidden;
   padding: 70px 0;
   box-sizing: border-box;
   background-color: #18181a;
