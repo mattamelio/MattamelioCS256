@@ -1,32 +1,32 @@
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: lightgrey;
+  background-color: grey;
 }
 
 header {
   padding: 40px;
   text-align: center;
-  background: grey;
+  background: blue;
   margin:30px;
-  font-size:20px;
+  font-size:30px;
   text-color: black;
 }
 
 body {
-  margin: 0;
+  margin: 10;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  color: navy;
+  color: black;
   margin-left: 20px;
   text-align: center;
 }
 
 h2 {
   color: black;
-  margin-left: 100px;
+  margin-left: 20px;
   text-align: center;
 }
 
