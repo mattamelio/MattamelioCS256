@@ -1,9 +1,10 @@
 header {
   padding: 40px;
   text-align: center;
-  background: #f9f7f7;
+  background: grey;
   margin:30px;
   font-size:20px;
+  text-color: black;
 }
 
 body {
@@ -60,7 +61,7 @@ th, td {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   height: 100px;
