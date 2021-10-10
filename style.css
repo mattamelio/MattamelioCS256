@@ -41,7 +41,7 @@ p {
 }
 
 #para1 {
-   color: blue
+   color: red;
    margin:15px;
 }
 
@@ -71,6 +71,6 @@ th, td {
 }
 
 img{
-   postion: center;
+   text-align: center;
 }
 
