@@ -101,7 +101,7 @@ nav a 	 {text-decoration: none;} /* No underline on links in navbar */
 .nav-menu {
     z-index: 3;
     position: fixed;
-    left: -100%;
+    left: 0%;
     top: 55%;
     flex-direction: column;
     background:rgba(255,255,255,1.0);
