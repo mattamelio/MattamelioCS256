@@ -77,7 +77,6 @@ th, td {
 }
 
 
-
 /* Navigation Bar */
 nav li 	 {list-style: none;} /* No bullets */
 
@@ -101,7 +100,7 @@ nav a 	 {text-decoration: none;} /* No underline on links in navbar */
 .nav-menu {
     z-index: 3;
     position: fixed;
-    left: 0%;
+    left: -100%;
     top: 55%;
     flex-direction: column;
     background:rgba(255,255,255,1.0);
@@ -148,5 +147,4 @@ position to 0 (no longer hiding at left position -100%) */
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
-
 
