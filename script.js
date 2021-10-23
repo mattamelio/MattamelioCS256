@@ -7,7 +7,7 @@ const navLink = document.querySelectorAll(".nav-link"); // array of all of the l
 
 // Your code here!
 
-hamburger.addEventListener("click", openMenu);
+hamburger.addEventListener("click", toggleActive());
 
 
 // function to open the navigation menu
@@ -16,6 +16,14 @@ hamburger.addEventListener("click", openMenu);
 // slide out, or the hamburger will go back to a burger and the menu will slide in
 function toggleActive() {
     // Your code here!
+	
+	this.hamburger.toggle("is-active");
+	if (this.hamburger.contains('is-active')){
+		openNav();
+	} else{
+		close.Nav();
+	}
+
 }
 
 
