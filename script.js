@@ -7,7 +7,7 @@ const navLink = document.querySelectorAll(".nav-link"); // array of all of the l
 
 // Your code here!
 
-
+hamburger.addEventListener("click", openMenu);
 
 
 // function to open the navigation menu
