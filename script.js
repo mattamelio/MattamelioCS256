@@ -12,7 +12,6 @@ const bar = document.querySelector(".bar");
 
 // Add an event listener so the hamburger calls openMenu when it is clicked
 
-// Your code here!
 
 hamburger.addEventListener("click", toggleActive);
 darkmode.addEventListener("click", toggleDark);
