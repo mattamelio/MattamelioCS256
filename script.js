@@ -6,7 +6,7 @@ const darkmode = document.querySelector("#dark");
 const body = document.getElementByTageName("body")[0];
 const header = document.querySelector(".header");
 const footer = document.querySelector(".footer");
-const bar = document.querySelector(".bar");
+const bar = document.querySelectorAll(".bar");
 
 
 
@@ -23,7 +23,7 @@ darkmode.addEventListener("click", toggleDark);
 // slide out, or the hamburger will go back to a burger and the menu will slide in
 
 function toggleActive() {
-	
+
 	hamburger.classList.toggle("active");
 	navMenu.classList.toggle("active");
 }
@@ -33,7 +33,7 @@ function toggleActive() {
 // when it is clicked
 
 for(var i = 0; i < navLink.length; i++) {
-	
+
 	navLink[i].addEventListener("click", closeMenu);
 }
 
@@ -42,15 +42,15 @@ for(var i = 0; i < navLink.length; i++) {
 // function to close the navigation nav
 // this needs to remove the class "active" from both hamburger and navMenu
 function closeMenu() {
-	
-	hamburger.classList.remove("active);
+
+	hamburger.classList.remove("active");
 	navMenu.classList.remove("active");
 }
 
 
 
 function toggleDark() {
-	
+
 	body.classList.toggle("darkmode");
 	header.classList.toggle("darkmode");
 	footer.classLst.toggle("darkmode");
