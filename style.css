@@ -43,7 +43,6 @@ p {
 #para1 {
    color: black;
    margin:15px;
-
    text-align: center;
 }
 
@@ -148,3 +147,34 @@ position to 0 (no longer hiding at left position -100%) */
     transform: translateY(-8px) rotate(-45deg);
 }
 
+.darkmode {
+	background-color: rgba(100, 100, 100, 1.0);
+}
+
+.darkmode.header {
+	background-color: rgba(100, 100, 100, 1.0);
+}
+
+.darkmode.footer {
+	background-color: rgba(100, 100, 100, 1.0);
+}
+
+.darkmode.bar {
+	background-color: rgba(230, 230, 230, 1.0);
+}
+
+.darkmode ul li {
+	background-color: rgba(100, 100, 100, 1.0);
+}
+
+.darkmode table {
+	border: .5px solid white;
+}
+
+.darkmode th {
+	border: .5px solid white;
+}
+
+.darkmode td {
+	border: .5px solid white;
+}
