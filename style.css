@@ -148,7 +148,8 @@ position to 0 (no longer hiding at left position -100%) */
 }
 
 .darkmode {
-	background-color: rgba(100, 100, 100, 1.0);
+	background: rgba(0,0,0,1.0);
+  color: rgba(255,255,255,1.0);
 }
 
 .darkmode.header {
