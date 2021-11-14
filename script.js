@@ -3,7 +3,7 @@ const hamburger = document.querySelector(".hamburger"); // the hamburger button
 const navMenu = document.querySelector(".nav-menu");    // the navigation menu
 const navLink = document.querySelectorAll(".nav-link"); // array of all of the links in the nav menu
 const darkmode = document.querySelector("#dark");
-const body = document.getElementByTageName("body")[0];
+const body = document.getElementByTagName("body")[0];
 const header = document.querySelector(".header");
 const footer = document.querySelector(".footer");
 const bar = document.querySelectorAll(".bar");
@@ -33,7 +33,6 @@ function toggleActive() {
 // when it is clicked
 
 for(var i = 0; i < navLink.length; i++) {
-
 	navLink[i].addEventListener("click", closeMenu);
 }
 
