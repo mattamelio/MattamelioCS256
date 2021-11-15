@@ -13,8 +13,8 @@ const bar = document.querySelectorAll(".bar");
 // Add an event listener so the hamburger calls openMenu when it is clicked
 
 
-hamburger.addEventListener("onClick", toggleActive);
-darkmode.addEventListener("onClick", toggleDark);
+hamburger.addEventListener("click", toggleActive);
+darkmode.addEventListener("click", toggleDark);
 
 
 // function to open the navigation menu
@@ -23,7 +23,7 @@ darkmode.addEventListener("onClick", toggleDark);
 // slide out, or the hamburger will go back to a burger and the menu will slide in
 
 function toggleActive() {
-
+  console.log("a");
 	hamburger.classList.toggle("active");
 	navMenu.classList.toggle("active");
 }
@@ -33,7 +33,7 @@ function toggleActive() {
 // when it is clicked
 
 for(var i = 0; i < navLink.length; i++) {
-	navLink[i].addEventListener("onClick", closeMenu);
+	navLink[i].addEventListener("click", closeMenu);
 }
 
 
