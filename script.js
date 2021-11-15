@@ -23,7 +23,6 @@ darkmode.addEventListener("click", toggleDark);
 // slide out, or the hamburger will go back to a burger and the menu will slide in
 
 function toggleActive() {
-  console.log("a");
 	hamburger.classList.toggle("active");
 	navMenu.classList.toggle("active");
 }
