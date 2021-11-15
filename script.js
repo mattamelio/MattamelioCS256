@@ -13,8 +13,8 @@ const bar = document.querySelectorAll(".bar");
 // Add an event listener so the hamburger calls openMenu when it is clicked
 
 
-hamburger.addEventListener("click", toggleActive);
-darkmode.addEventListener("click", toggleDark);
+hamburger.addEventListener("onClick", toggleActive);
+darkmode.addEventListener("onClick", toggleDark);
 
 
 // function to open the navigation menu
