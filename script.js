@@ -33,7 +33,7 @@ function toggleActive() {
 // when it is clicked
 
 for(var i = 0; i < navLink.length; i++) {
-	navLink[i].addEventListener("click", closeMenu);
+	navLink[i].addEventListener("onClick", closeMenu);
 }
 
 
