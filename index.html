@@ -1,101 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Matt's Autobiography</title>
   <script defer src="script.js" type="text/javascript"></script>
   <link rel="stylesheet" href="style.css">
   <meta charset="utf-8">
-  <title>My First Web Page!</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script defer src="map.js" type="text/javascript"></script>
 </head>
 
 <body>
-<nav class ="navbar">
-  <ul class="nav-menu">
-    <li class="nav-item">
-      <a href="#one" class="nav-link">Computer Science Autobiography</a>
-    </li>
-    <li class="nav-item">
-      <a href="#two" class="nav-link">Interests</a>
-    </li>
-    <li class="nav-item">
-      <a href="#img" class="nav-link">Image</a>
-    </li>
-  </ul>
-  <button class="hamburger">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-</nav>
-<button id = "dark"> Darkmode </button>
-
-  <div>
-    <section>
-      <h1>Hi! My name is Matt Amelio</h1>
-      <p id="para1" >I am from Pittsburgh, Pennsylvania and I am a graduating in 2022 from <a href="http://www.kings.edu">King's College</a>.</p>
-    </section>
-  </div>
-
-  <div id = "one">
-    <section>
-      <h2> Computer Science Autobiography </h2>
-
-      <p> Since I could remember technology has been apart of my life.  One of the main reasons for that is because both my parent's
-      careers involve technolgy, which in a way lead to me taking an interest in computers.  I remember using a computer for the
-      first time using my dad's computer for homework.  I can not specifically name one event that made me interested in computer
-      science, but I believe both my parents working with technology led me to it.  Also, knowing that the whole world involves
-      technolgy had an impact as well.  I have only used a couple of programming languages those being Java and Python.  Being able
-      to take this course is interesting for me because it allows me to create my first website and database.  Hopefulsly, this will
-      allow me to be able to do this on my own and use it in my career.  In the future I believe programming will be a huge part of
-      my life.  I plan on using my programming skills for my future career and maybe even help me start my own business with my
-      roommate. </p>
-    </section>
-  </div>
-
-<div id = "two">
-      <h2> Interests  </h2>
-
-      <table>
-        <tr>
-          <th>Movies</th>
-          <th>Director</th>
-          <th>Genre</th>
-          <th>Release Date </th>
-        </tr>
-        <tr>
-          <td><a href="https://en.wikipedia.org/wiki/Miracle_on_Ice_(1981_film)">Miracle on Ice</a></td>
-          <td>Steven Hillard Stern</td>
-          <td>Drama</td>
-          <td>1981</td>
-        </tr>
-        <tr>
-          <td><a href="https://en.wikipedia.org/wiki/Step_Brothers_(film)">Step Brothers</a></td>
-          <td>Adam McKay</td>
-          <td>Comedy</td>
-          <td>2008</td>
-        </tr>
-        <tr>
-          <td><a href="https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film)">Wolf on Wall Street</a></td>
-          <td>Martin Scorsese</td>
-          <td>Crime</td>
-          <td>2013</td>
-        </tr>
-        <tr>
-          <td><a href="https://en.wikipedia.org/wiki/Snowden_%28film%29">Snowden</a></td>
-          <td>Oliver Stone</td>
-          <td>Crime</td>
-          <td>2016</td>
-        </tr>
-      </table>
-
-    <section>
-      <h2> Movies I plan on watching </h2>
-      <ul>
-        <li>Black Widow</li>
-        <li>Fast and Furious 9: The Fast Saga</li>
-        <li>Top Gun: Maverick</li>
+    <body onload = "loadMap()">
+    <nav class ="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#one" class="nav-link">Computer Science Autobiography</a>
+        </li>
+        <li class="nav-item">
+          <a href="#two" class="nav-link">Interests</a>
+        </li>
+        <li class="nav-item">
+          <a href="#img" class="nav-link">Image</a>
+        </li>
       </ul>
-    </section>
- </div>
+      <button class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <button id = "dark"> Darkmode </button>
+
+    <div>
+      <section>
+        <h1>Hi! My name is Matt Amelio</h1>
+        <p id="para1" >I am from Pittsburgh, Pennsylvania and I am a graduating in 2022 from <a href="http://www.kings.edu">King's College</a>.</p>
+      </section>
+    </div>
+
+    <div id = "one">
+      <section>
+        <h2> Computer Science Autobiography </h2>
+
+        <p> Since I could remember technology has been apart of my life.  One of the main reasons for that is because both my parent's
+          careers involve technolgy, which in a way lead to me taking an interest in computers.  I remember using a computer for the
+          first time using my dad's computer for homework.  I can not specifically name one event that made me interested in computer
+          science, but I believe both my parents working with technology led me to it.  Also, knowing that the whole world involves
+          technolgy had an impact as well.  I have only used a couple of programming languages those being Java and Python.  Being able
+          to take this course is interesting for me because it allows me to create my first website and database.  Hopefulsly, this will
+          allow me to be able to do this on my own and use it in my career.  In the future I believe programming will be a huge part of
+          my life.  I plan on using my programming skills for my future career and maybe even help me start my own business with my
+          roommate. </p>
+        </section>
+      </div>
+
+      <div id = "two">
+        <h2> Interests  </h2>
+
+        <table>
+          <tr>
+            <th>Movies</th>
+            <th>Director</th>
+            <th>Genre</th>
+            <th>Release Date </th>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Miracle_on_Ice_(1981_film)">Miracle on Ice</a></td>
+            <td>Steven Hillard Stern</td>
+            <td>Drama</td>
+            <td>1981</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Step_Brothers_(film)">Step Brothers</a></td>
+            <td>Adam McKay</td>
+            <td>Comedy</td>
+            <td>2008</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film)">Wolf on Wall Street</a></td>
+            <td>Martin Scorsese</td>
+            <td>Crime</td>
+            <td>2013</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Snowden_%28film%29">Snowden</a></td>
+            <td>Oliver Stone</td>
+            <td>Crime</td>
+            <td>2016</td>
+          </tr>
+        </table>
+
+        <section>
+          <h2> Movies I plan on watching </h2>
+          <ul>
+            <li>Black Widow</li>
+            <li>Fast and Furious 9: The Fast Saga</li>
+            <li>Top Gun: Maverick</li>
+          </ul>
+        </section>
+      </div>
 
 
 
@@ -104,6 +109,7 @@
         <img src="https://content.invisioncic.com/r251241/monthly_2017_06/Pens.jpg.787239903141e9632cb4a1b97d4e45a3.jpg" alt="Pittsburgh Penguins">
       </div>
     </div>
+    <div id="map" style="height:400px"></div>
   </body>
     <div class = "footer"> &#0153; Matt Amelio Website Builder - All Rights Reserved </div>
 </html>

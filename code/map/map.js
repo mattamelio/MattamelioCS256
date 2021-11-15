@@ -6,7 +6,27 @@ function getJSONMarkers() {
     {
       "name": "King's College",
       "location": [41.2503, -75.8794],
-    }
+    },
+		{
+			"name": "My Lake House",
+			"location": [41.42566, -75.354340],
+		},
+		{
+			"name": "My House",
+			"location": [40.26559, -80.05148],
+		},
+		{
+			"name": "My Brother's House",
+			"location": [44.956576, -93.301362],
+		},
+		{
+			"name": "My Sister's House",
+			"location": [38.876991, -77.114868],
+		},
+		{
+			"name": "My Beach House",
+			"location": [34.994272, -81.054163],
+		}
 	]
 
 	// return this as a JSON string that needs to be parsed
@@ -44,9 +64,9 @@ function drawMarkers(map) {
 
   // Loop through JSON structure to get locations
   for(marker of markers) {
-    latitude = null; // replace null with the latitude of your location
-    longitude = null; // replace null with the longitude of your location
-    message = null; // replace this with the text about your location
+    latitude = marker.location[0]; // replace null with the latitude of your location
+    longitude = marker.location[1]; // replace null with the longitude of your location
+    message = marker.name; // replace this with the text about your location
 
     L.marker({lat: latitude, lon: longitude}).bindPopup(message).addTo(map);
   }
