@@ -1,3 +1,4 @@
+
 *{
   background: lightgrey;
 }
@@ -13,7 +14,6 @@ h1 {
   margin-left: 20px;
   text-align: left;
   font-size: 2.2em;
-  background-color: white;
 }
 
 h2 {
@@ -21,7 +21,6 @@ h2 {
   margin-left: 40px;
   text-align: left;
   font-size: 2.0em;
-  background-color: white;
 }
 
 p {
@@ -61,19 +60,26 @@ ul, li {
 
 .footer {
     postion: relative;
-    left: 0;
-    bottom:0px;
-    background-color: #r7df9ff;
+    left: 0px;
+    bottom: 0px;
     color: black;
     text-align: center;
     width:100%;
     height: 100px;
 }
 
-#img {
-   text-align: center;
+img {
+   max-width: 100%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
 }
 
+a:link {
+  color: blue;
+  background-color: lightblue;
+}
 
 /* Navigation Bar */
 nav li 	 {list-style: none;} /* No bullets */
@@ -84,10 +90,10 @@ nav a 	 {text-decoration: none;} /* No underline on links in navbar */
 .navbar   { display: flex; align-items: center; padding: 1rem 1.5rem;}
 
 /* Sets margins around nav items */
-.nav-item { margin-left: 5rem; margin-right: 2rem}
+.nav-item { margin-left: 5rem; margin-right: 2rem;}
 
 /* Sets the look of the links */
-.nav-link{ font-size: 1.6rem; font-weight: 400; color: #475569;}
+.nav-link{ font-size: 1.2rem; font-weight: 400; background-color: lightblue;}
 
 /* Changes color of link when hover over it */
 .nav-link:hover { color: #482ff7;}
@@ -99,9 +105,8 @@ nav a 	 {text-decoration: none;} /* No underline on links in navbar */
     z-index: 3;
     position: fixed;
     left: -100%;
-    top: 55%;
+    top: 10%;
     flex-direction: column;
-    background:rgba(255,255,255,1.0);
     text-align: center;
     transition: 0.3s;
 }
@@ -110,6 +115,7 @@ nav a 	 {text-decoration: none;} /* No underline on links in navbar */
 position to 0 (no longer hiding at left position -100%) */
 .nav-menu.active {
     left: 0;
+    background-color: lightblue;
 }
 
 /* display the hamburger as a clickable button, but make it blend in */
@@ -147,34 +153,194 @@ position to 0 (no longer hiding at left position -100%) */
 }
 
 .darkmode {
-	background: rgba(0,0,0,1.0);
-  color: rgba(255,255,255,1.0);
+	background: rgb(64,64,64)
+}
+.darkmode h1 {
+  color: white;
 }
 
-.darkmode.header {
-	background-color: rgba(100, 100, 100, 1.0);
+.darkmode h2 {
+  color: white;
 }
 
-.darkmode.footer {
-	background-color: rgba(100, 100, 100, 1.0);
+.darkmode .footer {
+	color: white;
 }
 
-.darkmode.bar {
-	background-color: rgba(230, 230, 230, 1.0);
+.darkmode .bar {
+	background-color: rgb(245,245,245);
 }
 
-.darkmode ul li {
-	background-color: rgba(100, 100, 100, 1.0);
+.darkmode * {
+	background-color: rgb(64,64,64);
+}
+
+.darkmode ul{
+	background-color: #000099;
+}
+
+.darkmode p{
+	background-color: #000099;
+  color: white;
 }
 
 .darkmode table {
 	border: .5px solid white;
+  color: white;
 }
 
 .darkmode th {
 	border: .5px solid white;
+  background-color:  #000099;
 }
 
 .darkmode td {
 	border: .5px solid white;
+  background-color:  #000099;
+}
+
+.darkmode ul {
+  background-color:  #000099;
+  color: white;
+}
+
+.darkmode li {
+  background-color:  #000099;
+  color: white;
+}
+
+.darkmode .nav-link{
+  color: white;
+  background-color:  #000099;
+}
+
+.darkmode a:link {
+  color: white;
+  background-color: #000099;
+}
+
+.darkmode #para1 {
+   color: white;
+   margin:15px;
+   text-align: center;
+}
+
+.darkmode #dark{
+    background-color: #000099;
+    color: white;
+}
+
+@media (max-width: 480px){
+
+  .nav-link{ font-size: .8rem; font-weight: 400; color: #475569;}
+
+  .nav-menu.active {
+      left: -25%;
+  }
+
+  .nav-menu {
+      z-index: 4;
+      left: -200%;
+      top: 10%;
+      flex-direction: column;
+      text-align: center;
+      transition: 0.3s;
+  }
+
+  h1 {
+    color: black;
+    margin-left: 20px;
+    text-align: left;
+    font-size: 1.4em;
+  }
+
+  h2 {
+    color: black;
+    margin-left: 20px;
+    text-align: left;
+    font-size: 1.2em;
+  }
+  p {
+    color: black;
+    font-size: 0.9em;
+    margin:5px;
+    padding: 5px;
+    background: lightblue;
+  }
+
+  #para1 {
+     color: black;
+     margin:10px;
+     text-align: center;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    background-color: lightblue;
+    width: 100;
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.85em;
+  }
+
+  img {
+     text-align: center;
+     max-width: 100%;
+     display: block;
+     width: auto ;
+     height: auto ;
+  }
+
+  .footer {
+      postion: relative;
+      left: 0;
+      bottom:0px;
+      background-color: #r7df9ff;
+      color: black;
+      text-align: center;
+      font-size: .9em;
+      width:100%;
+      height: 100px;
+  }
+
+  ul, li {
+    background-color: lightblue;
+    font-size: .9em;
+  }
+}
+
+@media (min-width: 481px){
+  .nav-menu {
+  float: left;
+  background-color: lightblue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-menu a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-menu a:hover {
+  color: #1c87c9;
+}
+.bar {
+    display: block;
+    width: 0;
+    height: 10px;
+    margin: 0;
+    left: -100%;
+    background-color: lightgrey;
+}
 }
