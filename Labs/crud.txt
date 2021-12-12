@@ -1,0 +1,13 @@
+(1) curl --data "id=CS499&title=Special Topics in CS&semester=Fall&year=2022&credits=3" http://
+→ localhost:3000/classes/
+
+Returned: [{"id":"CS499","title":"Special Topics in CS","semester":"Fall","year":2022,"credits":3}]
+
+(2)curl -X PUT -d "title=Special Topics in Computer Science" -d "semester=Spring" -d "year=2023
+,→ " -d "credits=3" http://localhost:3000/classes/CS499
+
+Returned:[{"id":"CS499","title":"Special Topics in Computer Science","semester":"Spring","year":2023,"credits":3}]
+
+(3) curl -X "DELETE" http://localhost:3000/classes/CS499
+
+Returned: []

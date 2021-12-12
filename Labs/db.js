@@ -83,32 +83,43 @@ const getClassesBySemester = (request, response) => {
 // Add a new class
 const addClass = (request, response) => {
 	server.then((conn) => {
-  	const { id, title, semester, year } = request.body;
+  	const { id, title, semester, year, credits } = request.body;
 
-  	conn.query('INSERT INTO classes VALUES ($1, $2, $3, $4)', [id, title, semester, year], (error, results) => {
+  	conn.query('INSERT INTO classes VALUES ($1, $2, $3, $4, $5)', [id, title, semester, year, credits], (error, results) => {
 	    if (error) {
 	      throw error;
 	    }
 	    response.status(201).send(`Class added with ID: ${id}`);
-  	});
-	});
+	   });
+  });
 };
 
 // Update a class
 const updateClass = (request, response) => {
-	server.then((conn) => {
+  server.then((conn) => {
+    const id = request.params.id;
+    const { title, semester, year, credits } = request.body;
 
-    conn.query('UPDATE classes SET ')
-	});
+    conn.query('UPDATE classes SET title = $2, semester = $3, year = $4, credits = $5 WHERE id = $1', [id, title, semester, year, credits], (error, results) => {
+  	  if (error) {
+  	    throw error;
+  	  }
+  	  response.status(200).json(results.rows);
+      });
+  });
 };
 
 // Delete a class
 const deleteClass = (request, response) => {
 	server.then((conn) => {
+    const id = request.params.id;
 
-    conn.query('DELETE * FROM classes WHERE')
-
-	});
+    conn.query('DELETE FROM classes WHERE id = $1', [id], (error) => {
+  	  if (error) {
+  	    throw error;
+  	  }
+    });
+  });
 };
 
 // Export the database connection and CRUD functions

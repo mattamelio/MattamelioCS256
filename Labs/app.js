@@ -1,10 +1,16 @@
 // main file to run the server application
+const path = require('path')
+const cors = require('cors')
 const express = require('express')
 const bodyParser = require('body-parser')
 const db  = require('./db')
 
 const app = express();
 const port = 3000;
+// Use CORS for security
+app.use(cors())
+// Set up where to find the static frontend elements (html, css, js, images, files, etc.)
+app.use(express.static(path.join(__dirname, '')));
 
 app.use(bodyParser.json());
 app.use(
@@ -13,10 +19,9 @@ app.use(
   })
 );
 
-// function for HTML get request
+// Default get response for http://localhost:3000/
 app.get('/', (request, response) => {
-
-  response.json({ info: 'CS256 Fall 2021 Lab' });
+response.sendfile('index.html');
 });
 
 // Set API Endpoints

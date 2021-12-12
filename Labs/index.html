@@ -9,24 +9,25 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script defer src="map.js" type="text/javascript"></script>
   <script defer src="api.js" type="text/javascript"></script>
+  <script defer src="data.js" type="text/javascript"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
-    <body onload = "loadMap(); doAPICall()">
+    <body onload = "loadMap(); doAPICall(); loadClasses();">
     <nav class ="navbar">
       <header class = "header">
       <ul class="nav-menu">
         <li class="nav-item">
-          
+
           <a href="#one" class="nav-link">Computer Science Autobiography</a>
         </li>
         <li class="nav-item">
           <a href="#two" class="nav-link">Interests</a>
         </li>
         <li class="nav-item">
-          <a href="#img" class="nav-link">Image</a>
+          <a href="#three" class="nav-link">Image</a>
         </li>
       </ul>
       </header>
@@ -59,6 +60,34 @@
           my life.  I plan on using my programming skills for my future career and maybe even help me start my own business with my
           roommate. </p>
         </section>
+      </div>
+
+      <div id="new_classes">
+        <form action="#" onsubmit="return createClass();" id="class_form">
+        <label for="new_classes">Future Class Options</label>
+        <select name="id" id="id">
+          <option value="CS-490" data-title="Special Topics--Cyber Security" data-credits=3>CS,→ -490: Special Topics--Cyber Security</option>
+          <option value="CS-270" data-title="Computer Organization" data-credits=3>CS,→ -270: Computer Organization</option>
+          <option value="CS-233" data-title="Advanced Data Structures" data-credits=3>CS,→ -233: Advanced Data Structures</option>
+          <option value="CS-328" data-title="Theory of Algorithms" data-credits=3>CS,→ -328: Theory of Algorithms</option>
+        </select>
+        <label for="new_sem">Future Semesters</label>
+        <select name="semester" id="semester">
+          <option value="Fall" data-year="2022">Fall 2022</option>
+          <option value="Spring" data-year="2022">Spring 2022</option>
+          <option value="Fall" data-year="2022">Fall 2023</option>
+          <option value="Spring" data-year="2022">Spring 2023</option>
+        </select>
+        <input type=hidden name="title" id="title" />
+        <input type=hidden name="credits" id="credits" />
+        <input type=hidden name="year" id="year" />
+        <input type="submit" value="Submit" />
+        </form>
+      </div>
+
+      <div id="classes">
+        <table id="fall"></table>
+        <table id="spring"></table>
       </div>
 
       <div id = "two">
@@ -113,8 +142,10 @@
         </section>
       </div>
 
+      <div id = "three">
         <h2> Image of an Interest of Mine </h2>
         <img src="https://content.invisioncic.com/r251241/monthly_2017_06/Pens.jpg.787239903141e9632cb4a1b97d4e45a3.jpg" alt="Pittsburgh Penguins">
+      </div>
     </div>
   </body>
     <div class = "footer"> &#0153; Matt Amelio Website Builder - All Rights Reserved </div>
