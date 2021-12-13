@@ -86,9 +86,12 @@ const addClass = (request, response) => {
   	const { id, title, semester, year, credits } = request.body;
 
   	conn.query('INSERT INTO classes VALUES ($1, $2, $3, $4, $5)', [id, title, semester, year, credits], (error, results) => {
-	    if (error) {
-	      throw error;
-	    }
+      if(error) {
+          console.log(`Printing error: ${error}`);
+          if(error.code == '23505'){
+            response.status(500).send(`Class ${id} already exists.`);
+          }
+        }
 	    response.status(201).send(`Class added with ID: ${id}`);
 	   });
   });

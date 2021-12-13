@@ -41,11 +41,11 @@ function createClass() {
   // call loadClasses to reload the tables
    fetch( "/classes/CS499", loadClasses())
    {
-       method: get(),
+       method: post(),
        headers: {
          'Content-Type': 'application/json'
        },
-       body: /* encode the form data as json*/,
+       body: JSON.stringify(Object.fromEntries(formData)),
    })
    .then(response => {   // first then checks if the response is ready and if it
      if(!response.ok) {  // is ok (200) or an error (500)
@@ -57,7 +57,7 @@ function createClass() {
      }                   // confirmation string
    })
   // // prints out confirmation from DB and updates displayed tables
-   .then(data => {/* print the data to the console*/; /* call load classes*/;});
+   .then(data => {data => displayClasses(data,"spring"); loadClasses();});
   // // catch the error that occurred and print to the console
    .catch(error => { console.error('Error:', error)});
 
